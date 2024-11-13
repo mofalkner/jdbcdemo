@@ -10,3 +10,7 @@
 ### 3. Video:
 - Im 3. Video wurde nun der Code für die Connection zur Datenbank geschrieben!
 - Diesen haben wir aber schon in einer vorherigen Stunde ausprogrammieret!
+
+### 4. Video:
+- Nun wurde in der Main ein PreparedStatement codiert!
+- Auch eine while-Schleife, die die ganzen Inhalte ausgibt, wurde deklariert!
