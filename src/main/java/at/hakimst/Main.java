@@ -22,5 +22,6 @@ public class Main {
         {
             throw new RuntimeException("Treiber nicht gefunden!");
         }
+        //INSERT INTO `student` (`id`, `name`, `email`) VALUES (NULL, 'Moritz Falkner', 'moritzfalkner@gmail.com'), (NULL, 'Jakob Falkner', 'jafalkner@gmail.com');
     }
 }
