@@ -11,7 +11,7 @@ public class Main {
 
             try
             {
-                    Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test","root","");
+                    Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/jdbcdemo","root","");
             }
             catch (SQLException e)
             {
