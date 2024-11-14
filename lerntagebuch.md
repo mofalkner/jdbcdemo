@@ -14,3 +14,9 @@
 ### 4. Video:
 - Nun wurde in der Main ein PreparedStatement codiert!
 - Auch eine while-Schleife, die die ganzen Inhalte ausgibt, wurde deklariert!
+
+### 5. Video:
+- Nun wurde der vorherige Code zuerst in die Methode selectAllDemo hinzugefügt!
+- Danach wurde die Methode insertStudentDemo hinzugefügt!
+- Dort wurde der Code von der anderen Methode hinein kopiert und es wurde statt einem SELECT-Statement ein INSERT Statement verwendet!
+- Mit diesem wird ein neuer Student in die Tabelle hinzugefügt!
