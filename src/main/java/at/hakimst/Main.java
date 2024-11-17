@@ -10,6 +10,11 @@ public class Main {
         selectAllDemo();
     }
 
+    public static void deleteStudentDemo()
+    {
+
+    }
+
     public  static void updateStudentDemo()
     {
         try
