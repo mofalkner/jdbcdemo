@@ -4,9 +4,15 @@ import java.sql.*;
 public class Main {
     public static void main(String[] args)
     {
+        System.out.println("JDBC Demo!");
         selectAllDemo();
         insertStudentDemo();
         selectAllDemo();
+    }
+
+    public  static void updateStudentDemo()
+    {
+
     }
 
     public static void insertStudentDemo()
@@ -40,7 +46,6 @@ public class Main {
         {
             throw new RuntimeException("Treiber nicht gefunden!");
         }
-        //INSERT INTO `student` (`id`, `name`, `email`) VALUES (NULL, 'Moritz Falkner', 'moritzfalkner@gmail.com'), (NULL, 'Jakob Falkner', 'jafalkner@gmail.com');
     }
 
     public static void selectAllDemo()
