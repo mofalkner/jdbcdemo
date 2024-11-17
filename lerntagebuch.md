@@ -24,3 +24,11 @@
 ### 6. Video:
 - Es wurde eine neue Methode namens updateStudentDemo erstellt!
 - In dieser wurde dann der Code von der anderen Methode selectAllDemo eingefügt und dann wurde dieser noch umgeschrieben!
+
+### 7. Video:
+- Es wurde eine Methode namens deleteStudentDemo erstellt!
+- In dieser wurde wieder der Code von einer anderen Methode hinein kopiert und dann abgeändert, sodass diese jetzt einen bestimmten Studenten herauslöscht!
+
+### 8. Video:
+- Zum Abschluss wurde noch eine Methoden namens findAllByNameLike erstellt!
+- Mit dieser Methode kann man anhand von Buchstaben einen Studenten herausfiltern!
