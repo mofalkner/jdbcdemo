@@ -6,13 +6,39 @@ public class Main {
     {
         System.out.println("JDBC Demo!");
         selectAllDemo();
-        updateStudentDemo();
+        deleteStudentDemo(5);
         selectAllDemo();
     }
 
-    public static void deleteStudentDemo()
+    public static void deleteStudentDemo(int studentID)
     {
-
+        try
+        {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            try
+            {
+                Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/jdbcdemo","root","");
+                PreparedStatement preparedStatement = con.prepareStatement("DELETE FROM student WHERE student.id = ?;");
+                try
+                {
+                    preparedStatement.setInt(1,studentID);
+                    int rowAffected = preparedStatement.executeUpdate();
+                    System.out.println("Anzahl der gelöschten Datensätze: " + rowAffected);
+                }
+                catch (SQLException ex)
+                {
+                    System.out.println("Fehler im SQL-DELETE Statement: " + ex.getMessage());
+                }
+            }
+            catch (SQLException e)
+            {
+                throw new RuntimeException("Die Verbindung nicht möglich!");
+            }
+        }
+        catch (ClassNotFoundException e)
+        {
+            throw new RuntimeException("Treiber nicht gefunden!");
+        }
     }
 
     public  static void updateStudentDemo()
