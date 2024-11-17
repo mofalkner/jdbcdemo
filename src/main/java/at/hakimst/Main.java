@@ -41,7 +41,7 @@ public class Main {
         }
     }
 
-    public  static void updateStudentDemo()
+    public  static void updateStudentDemo( int ID, String neuerName, String neueEmail)
     {
         try
         {
@@ -49,11 +49,12 @@ public class Main {
             try
             {
                 Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/jdbcdemo","root","");
-                PreparedStatement preparedStatement = con.prepareStatement("UPDATE student SET name=?, email=? WHERE student.id=4;");
+                PreparedStatement preparedStatement = con.prepareStatement("UPDATE student SET name=?, email=? WHERE student.id=?;");
                 try
                 {
-                    preparedStatement.setString(1,"Hans Zimmer");
-                    preparedStatement.setString(2,"h.zi765@trx.at");
+                    preparedStatement.setString(1,neuerName);
+                    preparedStatement.setString(2,neueEmail);
+                    preparedStatement.setInt(3,ID);
                     int affectedRows = preparedStatement.executeUpdate();
                     System.out.println("Anzahl der aktualisierten Datensätze: " + affectedRows);
                 }
@@ -73,7 +74,7 @@ public class Main {
         }
     }
 
-    public static void insertStudentDemo()
+    public static void insertStudentDemo(String name, String email)
     {
         try
         {
@@ -84,8 +85,8 @@ public class Main {
                 PreparedStatement preparedStatement = con.prepareStatement("INSERT INTO `student` (`id`, `name`, `email`) VALUES (NULL, ?, ?);");
                 try
                 {
-                    preparedStatement.setString(1,"Peter Zeck");
-                    preparedStatement.setString(2,"p.zeck@gmail.com");
+                    preparedStatement.setString(1,name);
+                    preparedStatement.setString(2,email);
                     int rowAffected = preparedStatement.executeUpdate();
                     System.out.println(rowAffected + " Datensätze eingefügt!");
 
@@ -134,6 +135,5 @@ public class Main {
         {
             throw new RuntimeException("Treiber nicht gefunden!");
         }
-        //INSERT INTO `student` (`id`, `name`, `email`) VALUES (NULL, 'Moritz Falkner', 'moritzfalkner@gmail.com'), (NULL, 'Jakob Falkner', 'jafalkner@gmail.com');
     }
 }
