@@ -6,13 +6,40 @@ public class Main {
     {
         System.out.println("JDBC Demo!");
         selectAllDemo();
-        insertStudentDemo();
+        updateStudentDemo();
         selectAllDemo();
     }
 
     public  static void updateStudentDemo()
     {
-
+        try
+        {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            try
+            {
+                Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/jdbcdemo","root","");
+                PreparedStatement preparedStatement = con.prepareStatement("UPDATE student SET name=?, email=? WHERE student.id=4;");
+                try
+                {
+                    preparedStatement.setString(1,"Hans Zimmer");
+                    preparedStatement.setString(2,"h.zi765@trx.at");
+                    int affectedRows = preparedStatement.executeUpdate();
+                    System.out.println("Anzahl der aktualisierten Datensätze: " + affectedRows);
+                }
+                catch (SQLException ex)
+                {
+                    System.out.println("Fehler im SQL-UPDATE Statement: " + ex.getMessage());
+                }
+            }
+            catch (SQLException e)
+            {
+                throw new RuntimeException("Die Verbindung nicht möglich!");
+            }
+        }
+        catch (ClassNotFoundException e)
+        {
+            throw new RuntimeException("Treiber nicht gefunden!");
+        }
     }
 
     public static void insertStudentDemo()
