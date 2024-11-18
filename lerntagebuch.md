@@ -1,5 +1,7 @@
 # Lerntagebuch vom JDBC Intro!
 
+## Teil 1:
+
 ### 1. Video:
 - Im ersten Video haben wir alles in diesem Java-Projekt eingerichtet!
 
@@ -32,3 +34,10 @@
 ### 8. Video:
 - Zum Abschluss wurde noch eine Methoden namens findAllByNameLike erstellt!
 - Mit dieser Methode kann man anhand von Buchstaben einen Studenten herausfiltern!
+
+## Teil 2:
+
+- Es wurde eine neue Tabelle namens adress erstellt!
+- Darin wurde drei Spalten namens adress_id, plz und place erstellt!
+- In diesen wurden schon Beispiele hinzugefügt!
+- Danach wurden alle Methoden, die auf student zugreifen dupliziert so umgeändert, dass sie jetzt auf adress zugreifen!
