@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args)
     {
         System.out.println("JDBC Demo!");
-        findAllByNameLike("falk");
+        selectAllStudentDemo();
     }
 
     private static void findAllByNameLike(String pattern)
@@ -136,7 +136,7 @@ public class Main {
         }
     }
 
-    public static void selectAllDemo()
+    public static void selectAllStudentDemo()
     {
         try
         {
